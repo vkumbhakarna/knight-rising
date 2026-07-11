@@ -1,4 +1,5 @@
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.stopAnimation(animation.AnimationTypes.All, mySprite)
     animation.runImageAnimation(
     mySprite,
     [img`
@@ -95,17 +96,17 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     arrow = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . 4 . . . . 
-        . . . 5 . . . . . . . . . . . . 
-        . 2 . . 5 . . . . . 5 . 4 . . . 
-        . . . 2 . 5 . . 2 . . 5 2 2 . . 
-        . . . 5 2 . . 2 5 2 . 2 5 2 2 . 
-        . 5 4 4 2 5 2 5 4 5 2 5 4 5 2 2 
-        5 . 5 4 2 5 2 2 5 2 . 2 5 2 2 . 
-        . . . 5 2 . 2 . 2 . . 5 2 2 . . 
-        . . . 2 . 5 . . . . 5 . 4 . . . 
-        . 2 . . 5 . . . . . . . . . . . 
-        . . . 5 . . . . . . . 4 . . . . 
+        . . . 8 . . . . . . . . . . . . 
+        . . 8 . 8 . . . . . . 8 8 8 . . 
+        . . . . . 9 . . . . 8 8 9 8 8 . 
+        . . 9 . 9 . 8 . . 8 8 9 9 9 8 8 
+        . . . 9 . 9 . 8 8 8 9 8 9 8 9 8 
+        . . . . . . 9 . . 8 8 9 8 9 9 8 
+        . . . 9 . 9 . 8 8 8 9 8 9 8 9 8 
+        . . 9 . 9 . 8 . . 8 8 9 9 9 8 . 
+        . . . . . 9 . . . . . 8 8 8 . . 
+        . . 8 . 8 . . . . . . . . . . . 
+        . . . 8 . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -115,17 +116,17 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . 4 . . . . . . . 5 . . . 
-        . . . . . . . . . . . 5 . . 2 . 
-        . . . 4 . 5 . . . . 5 . 2 . . . 
-        . . 2 2 5 . . 2 . 2 . 2 5 . . . 
-        . 2 2 5 2 . 2 5 2 2 5 2 4 5 . 5 
-        2 2 5 4 5 2 5 4 5 2 5 2 4 4 5 . 
-        . 2 2 5 2 . 2 5 2 . . 2 5 . . . 
-        . . 2 2 5 . . 2 . . 5 . 2 . . . 
-        . . . 4 . 5 . . . . . 5 . . 2 . 
-        . . . . . . . . . . . . 5 . . . 
-        . . . . 4 . . . . . . . . . . . 
+        . . . . . . . . . . . . 8 . . . 
+        . . . . . . . . . . . 8 . 8 . . 
+        . . 8 8 8 . . . . . 9 . . . . . 
+        . 8 9 9 9 8 8 . . 8 . 9 . 9 . . 
+        8 9 8 9 8 9 8 8 8 . 9 . 9 . . . 
+        8 9 9 8 9 8 8 . . 9 . . . . . . 
+        8 9 8 9 8 9 8 8 8 . 9 . 9 . . . 
+        8 8 9 9 9 8 8 . . 8 . 9 . 9 . . 
+        . 8 8 9 8 8 . . . . 9 . . . . . 
+        . . 8 8 8 . . . . . . 8 . 8 . . 
+        . . . . . . . . . . . . 8 . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, mySprite, -50, 50)
@@ -133,17 +134,17 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     arrow = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . 4 . . . . 
-        . . . 5 . . . . . . . . . . . . 
-        . 2 . . 5 . . . . . 5 . 4 . . . 
-        . . . 2 . 5 . . 2 . . 5 2 2 . . 
-        . . . 5 2 . . 2 5 2 . 2 5 2 2 . 
-        . 5 4 4 2 5 2 5 4 5 2 5 4 5 2 2 
-        5 . 5 4 2 5 2 2 5 2 . 2 5 2 2 . 
-        . . . 5 2 . 2 . 2 . . 5 2 2 . . 
-        . . . 2 . 5 . . . . 5 . 4 . . . 
-        . 2 . . 5 . . . . . . . . . . . 
-        . . . 5 . . . . . . . 4 . . . . 
+        . . . 8 . . . . . . . . . . . . 
+        . . 8 . 8 . . . . . . 8 8 8 . . 
+        . . . . . 9 . . . . 8 8 9 8 8 . 
+        . . 9 . 9 . 8 . . 8 8 9 9 9 8 8 
+        . . . 9 . 9 . 8 8 8 9 8 9 8 9 8 
+        . . . . . . 9 . . 8 8 9 8 9 9 8 
+        . . . 9 . 9 . 8 8 8 9 8 9 8 9 8 
+        . . 9 . 9 . 8 . . 8 8 9 9 9 8 . 
+        . . . . . 9 . . . . . 8 8 8 . . 
+        . . 8 . 8 . . . . . . . . . . . 
+        . . . 8 . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -153,17 +154,17 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . 4 . . . . . . . 5 . . . 
-        . . . . . . . . . . . 5 . . 2 . 
-        . . . 4 . 5 . . . . 5 . 2 . . . 
-        . . 2 2 5 . . 2 . 2 . 2 5 . . . 
-        . 2 2 5 2 . 2 5 2 2 5 2 4 5 . 5 
-        2 2 5 4 5 2 5 4 5 2 5 2 4 4 5 . 
-        . 2 2 5 2 . 2 5 2 . . 2 5 . . . 
-        . . 2 2 5 . . 2 . . 5 . 2 . . . 
-        . . . 4 . 5 . . . . . 5 . . 2 . 
-        . . . . . . . . . . . . 5 . . . 
-        . . . . 4 . . . . . . . . . . . 
+        . . . . . . . . . . . . 8 . . . 
+        . . . . . . . . . . . 8 . 8 . . 
+        . . 8 8 8 . . . . . 9 . . . . . 
+        . 8 9 9 9 8 8 . . 8 . 9 . 9 . . 
+        8 9 8 9 8 9 8 8 8 . 9 . 9 . . . 
+        8 9 9 8 9 8 8 . . 9 . . . . . . 
+        8 9 8 9 8 9 8 8 8 . 9 . 9 . . . 
+        8 8 9 9 9 8 8 . . 8 . 9 . 9 . . 
+        . 8 8 9 8 8 . . . . 9 . . . . . 
+        . . 8 8 8 . . . . . . 8 . 8 . . 
+        . . . . . . . . . . . . 8 . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, mySprite, -50, -50)
@@ -331,7 +332,7 @@ info.onLifeZero(function () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.fire, 1000)
     info.changeScoreBy(1)
-    enemies += -1
+    max_enemies += -1
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     animation.runImageAnimation(
@@ -784,10 +785,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     info.changeLifeBy(-1)
     pause(1000)
 })
-let random_loc_4 = 0
-let random_loc_3 = 0
-let random_loc_2 = 0
-let random_loc_1 = 0
+let side = 0
 let dragon: Sprite = null
 let skeleton: Sprite = null
 let snake: Sprite = null
@@ -797,7 +795,8 @@ let arrow: Sprite = null
 let mySprite: Sprite = null
 music.play(music.stringPlayable("G F G A - F E D ", 120), music.PlaybackMode.LoopingInBackground)
 info.setLife(3)
-let enemies = 4
+info.setScore(0)
+let max_enemies = 0
 let otherSprite = [
 img`
     ........................
@@ -1098,428 +1097,433 @@ scene.setBackgroundImage(img`
     dddddeeddbeddddddfddddbddddfdddddddbdddddddfddddbdddddddddddfdbddfddddddddbfddddddddfddddddddddddbdddfddddddbdddddfddddddddbdddddfddddddbdddddddfdddddddbddddfdd
     `)
 game.setGameOverScoringType(game.ScoringType.HighScore)
-game.onUpdateInterval(10000, function () {
-    bat = sprites.create(img`
-        . f f f . . . . . . . . f f f . 
-        f f c . . . . . . . f c b b c . 
-        f c c . . . . . . f c b b c . . 
-        c f . . . . . . . f b c c c . . 
-        c f f . . . . . f f b b c c . . 
-        f f f c c . c c f b c b b c . . 
-        f f f c c c c c f b c c b c . . 
-        . f c 3 c c 3 b c b c c c . . . 
-        . c b 3 b c 3 b b c c c c . . . 
-        c c b b b b b b b b c c . . . . 
-        c b 1 b b b 1 b b b b f c . . . 
-        f b b b b b b b b b b f c c . . 
-        f b c b b b c b b b b f . . . . 
-        . f 1 f f f 1 b b b c f . . . . 
-        . . f b b b b b b c f . . . . . 
-        . . . f f f f f f f . . . . . . 
-        `, SpriteKind.Enemy)
-    animation.runImageAnimation(
-    bat,
-    [img`
-        . . f f f . . . . . . . . f f f 
-        . f f c c . . . . . . f c b b c 
-        f f c c . . . . . . f c b b c . 
-        f c f c . . . . . . f b c c c . 
-        f f f c c . c c . f c b b c c . 
-        f f c 3 c c 3 c c f b c b b c . 
-        f f b 3 b c 3 b c f b c c b c . 
-        . c b b b b b b c b b c c c . . 
-        . c 1 b b b 1 b b c c c c . . . 
-        c b b b b b b b b b c c . . . . 
-        c b c b b b c b b b b f . . . . 
-        f b 1 f f f 1 b b b b f c . . . 
-        f b b b b b b b b b b f c c . . 
-        . f b b b b b b b b c f . . . . 
-        . . f b b b b b b c f . . . . . 
-        . . . f f f f f f f . . . . . . 
-        `,img`
-        . . f f f . . . . . . . . . . . 
-        f f f c c . . . . . . . . f f f 
-        f f c c . . c c . . . f c b b c 
-        f f c 3 c c 3 c c f f b b b c . 
-        f f b 3 b c 3 b c f b b c c c . 
-        . c b b b b b b c f b c b c c . 
-        . c b b b b b b c b b c b b c . 
-        c b 1 b b b 1 b b b c c c b c . 
-        c b b b b b b b b c c c c c . . 
-        f b c b b b c b b b b f c . . . 
-        f b 1 f f f 1 b b b b f c c . . 
-        . f b b b b b b b b c f . . . . 
-        . . f b b b b b b c f . . . . . 
-        . . . f f f f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `,img`
-        . . . . . . . . . . . . . . . . 
-        . . c c . . c c . . . . . . . . 
-        . . c 3 c c 3 c c c . . . . . . 
-        . c b 3 b c 3 b c c c . . . . . 
-        . c b b b b b b b b f f . . . . 
-        c c b b b b b b b b f f . . . . 
-        c b 1 b b b 1 b b c f f f . . . 
-        c b b b b b b b b f f f f . . . 
-        f b c b b b c b c c b b b . . . 
-        f b 1 f f f 1 b f c c c c . . . 
-        . f b b b b b b f b b c c . . . 
-        c c f b b b b b c c b b c . . . 
-        c c c f f f f f f c c b b c . . 
-        . c c c . . . . . . c c c c c . 
-        . . c c c . . . . . . . c c c c 
-        . . . . . . . . . . . . . . . . 
-        `,img`
-        . f f f . . . . . . . . f f f . 
-        f f c . . . . . . . f c b b c . 
-        f c c . . . . . . f c b b c . . 
-        c f . . . . . . . f b c c c . . 
-        c f f . . . . . f f b b c c . . 
-        f f f c c . c c f b c b b c . . 
-        f f f c c c c c f b c c b c . . 
-        . f c 3 c c 3 b c b c c c . . . 
-        . c b 3 b c 3 b b c c c c . . . 
-        c c b b b b b b b b c c . . . . 
-        c b 1 b b b 1 b b b b f c . . . 
-        f b b b b b b b b b b f c c . . 
-        f b c b b b c b b b b f . . . . 
-        . f 1 f f f 1 b b b c f . . . . 
-        . . f b b b b b b c f . . . . . 
-        . . . f f f f f f f . . . . . . 
-        `],
-    500,
-    true
-    )
-    random_loc_1 = randint(0, 160)
-    random_loc_2 = randint(0, 160)
-    random_loc_3 = randint(0, 160)
-    random_loc_4 = randint(0, 160)
-    bat.setPosition(random_loc_1, random_loc_4)
-    bat.follow(mySprite, 20)
-    snake = sprites.create(img`
-        . . . . . c c c c c c c . . . . 
-        . . . . c 6 7 7 7 7 7 6 c . . . 
-        . . . c 7 c 6 6 6 6 c 7 6 c . . 
-        . . c 6 7 6 f 6 6 f 6 7 7 c . . 
-        . . c 7 7 7 7 7 7 7 7 7 7 c . . 
-        . . f 7 8 1 f f 1 6 7 7 7 f . . 
-        . . f 6 f 1 f f 1 f 7 7 7 f . . 
-        . . . f f 2 2 2 2 f 7 7 6 f . . 
-        . . c c f 2 2 2 2 7 7 6 f c . . 
-        . c 7 7 7 7 7 7 7 7 c c 7 7 c . 
-        c 7 1 1 1 7 7 7 7 f c 6 7 7 7 c 
-        f 1 1 1 1 1 7 6 f c c 6 6 6 c c 
-        f 1 1 1 1 1 1 6 6 c 6 6 6 c . . 
-        f 6 1 1 1 1 1 6 6 6 6 6 6 c . . 
-        . f 6 1 1 1 1 1 6 6 6 6 c . . . 
-        . . f f c c c c c c c c . . . . 
-        `, SpriteKind.Enemy)
-    animation.runImageAnimation(
-    snake,
-    [img`
-        . . . . c c c c c c . . . . . . 
-        . . . c 6 7 7 7 7 6 c . . . . . 
-        . . c 7 7 7 7 7 7 7 7 c . . . . 
-        . c 6 7 7 7 7 7 7 7 7 6 c . . . 
-        . c 7 c 6 6 6 6 c 7 7 7 c . . . 
-        . f 7 6 f 6 6 f 6 7 7 7 f . . . 
-        . f 7 7 7 7 7 7 7 7 7 7 f . . . 
-        . . f 7 7 7 7 6 c 7 7 6 f c . . 
-        . . . f c c c c 7 7 6 f 7 7 c . 
-        . . c 7 2 7 7 7 6 c f 7 7 7 7 c 
-        . c 7 7 2 7 7 c f c 6 7 7 6 c c 
-        c 1 1 1 1 7 6 f c c 6 6 6 c . . 
-        f 1 1 1 1 1 6 6 c 6 6 6 6 f . . 
-        f 6 1 1 1 1 1 6 6 6 6 6 c f . . 
-        . f 6 1 1 1 1 1 1 6 6 6 f . . . 
-        . . c c c c c c c c c f . . . . 
-        `,img`
-        . . . c c c c c c . . . . . . . 
-        . . c 6 7 7 7 7 6 c . . . . . . 
-        . c 7 7 7 7 7 7 7 7 c . . . . . 
-        c 6 7 7 7 7 7 7 7 7 6 c . . . . 
-        c 7 c 6 6 6 6 c 7 7 7 c . . . . 
-        f 7 6 f 6 6 f 6 7 7 7 f . . . . 
-        f 7 7 7 7 7 7 7 7 7 7 f . . . . 
-        . f 7 7 7 7 6 c 7 7 6 f . . . . 
-        . . f c c c c 7 7 6 f c c c . . 
-        . . c 6 2 7 7 7 f c c 7 7 7 c . 
-        . c 6 7 7 2 7 7 c f 6 7 7 7 7 c 
-        . c 1 1 1 1 7 6 6 c 6 6 6 c c c 
-        . c 1 1 1 1 1 6 6 6 6 6 6 c . . 
-        . c 6 1 1 1 1 1 6 6 6 6 6 c . . 
-        . . c 6 1 1 1 1 1 7 6 6 c c . . 
-        . . . c c c c c c c c c c . . . 
-        `],
-    500,
-    true
-    )
-    random_loc_2 = randint(0, 160)
-    snake.setPosition(random_loc_2, random_loc_1)
-    snake.follow(mySprite, 5)
-    skeleton = sprites.create(img`
-        ........................
-        ........................
-        ........................
-        ........................
-        ..........ffff..........
-        ........ff1111ff........
-        .......fb111111bf.......
-        .......f11111111f.......
-        ......fd11111111df......
-        ......fd11111111df......
-        ......fddd1111dddf......
-        ......fbdbfddfbdbf......
-        ......fcdcf11fcdcf......
-        .......fb111111bf.......
-        ......fffcdb1bdffff.....
-        ....fc111cbfbfc111cf....
-        ....f1b1b1ffff1b1b1f....
-        ....fbfbffffffbfbfbf....
-        .........ffffff.........
-        ...........fff..........
-        ........................
-        ........................
-        ........................
-        ........................
-        `, SpriteKind.Enemy)
-    animation.runImageAnimation(
-    skeleton,
-    [img`
-        ........................
-        ........................
-        ........................
-        ........................
-        ..........ffff..........
-        ........ff1111ff........
-        .......fb111111bf.......
-        .......f11111111f.......
-        ......fd11111111df......
-        ......fd11111111df......
-        ......fddd1111dddf......
-        ......fbdbfddfbdbf......
-        ......fcdcf11fcdcf......
-        .......fb111111bf.......
-        ......fffcdb1bdffff.....
-        ....fc111cbfbfc111cf....
-        ....f1b1b1ffff1b1b1f....
-        ....fbfbffffffbfbfbf....
-        .........ffffff.........
-        ...........fff..........
-        ........................
-        ........................
-        ........................
-        ........................
-        `,img`
-        ........................
-        ........................
-        ........................
-        ........................
-        ..........ffff..........
-        ........ff1111ff........
-        .......fb111111bf.......
-        .......f11111111f.......
-        ......fd11111111df......
-        ......fd11111111df......
-        ......fddd1111dddf......
-        ......fbdbfddfbdbf......
-        ......fcdcf11fcdcf......
-        .......fb111111ffff.....
-        ......fffcdb1bc111cf....
-        ....fc111cbfbf1b1b1f....
-        ....f1b1b1ffffbfbfbf....
-        ....fbfbfffffff.........
-        .........fffff..........
-        ..........fff...........
-        ........................
-        ........................
-        ........................
-        ........................
-        `,img`
-        ........................
-        ........................
-        ........................
-        ........................
-        ..........ffff..........
-        ........ff1111ff........
-        .......fb111111bf.......
-        .......f11111111f.......
-        ......fd11111111df......
-        ......fd11111111df......
-        ......fddd1111dddf......
-        ......fbdbfddfbdbf......
-        ......fcdcf11fcdcf......
-        .......fb111111bf.......
-        ......fffcdb1bdffff.....
-        ....fc111cbfbfc111cf....
-        ....f1b1b1ffff1b1b1f....
-        ....fbfbffffffbfbfbf....
-        .........ffffff.........
-        ...........fff..........
-        ........................
-        ........................
-        ........................
-        ........................
-        `,img`
-        ........................
-        ........................
-        ........................
-        ........................
-        ..........ffff..........
-        ........ff1111ff........
-        .......fb111111bf.......
-        .......f11111111f.......
-        ......fd11111111df......
-        ......fd11111111df......
-        ......fddd1111dddf......
-        ......fbdbfddfbdbf......
-        ......fcdcf11fcdcf......
-        .....ffff111111bf.......
-        ....fc111cdb1bdfff......
-        ....f1b1bcbfbfc111cf....
-        ....fbfbfbffff1b1b1f....
-        .........fffffffbfbf....
-        ..........fffff.........
-        ...........fff..........
-        ........................
-        ........................
-        ........................
-        ........................
-        `],
-    500,
-    true
-    )
-    random_loc_3 = randint(0, 160)
-    skeleton.setPosition(random_loc_3, random_loc_4)
-    skeleton.follow(mySprite, 10)
-    dragon = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . c c c c . . . . . . . . 
-        . . c c 5 5 5 5 c c . . . . . . 
-        . c 5 5 5 5 5 5 5 5 c . . . . . 
-        c 5 5 5 5 5 1 f 5 5 5 c . . . . 
-        c 5 5 5 5 5 f f 5 5 5 5 c . . . 
-        c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 d c . . 
-        c 5 3 3 3 5 5 5 5 5 d d d c . . 
-        . b 5 5 5 5 5 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c c . 
-        . c b b c 5 5 b b d d d d c d c 
-        . c c c c c c d d d d d d d d c 
-        . . . c c c c d 5 5 b d d d c . 
-        . . c c c c c b 5 5 b c c c . . 
-        . . c b b b c d 5 5 b c . . . . 
-        `, SpriteKind.Enemy)
-    random_loc_4 = randint(0, 160)
-    dragon.setPosition(random_loc_4, random_loc_2)
-    animation.runImageAnimation(
-    dragon,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . c c c c . . . . . . . . 
-        . . c c 5 5 5 5 c c . . . . . . 
-        . c 5 5 5 5 5 5 5 5 c . . . . . 
-        c 5 5 5 5 5 1 f 5 5 5 c . . . . 
-        c 5 5 5 5 5 f f 5 5 5 5 c . . . 
-        c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 d c . . 
-        c 5 3 3 3 5 5 5 5 5 d d d c . . 
-        . b 5 5 5 5 5 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c c . 
-        . c b b c 5 5 b b d d d d c d c 
-        . c c c c c c d d d d d d d d c 
-        . . . c c c c d 5 5 b d d d c . 
-        . . c c c c c b 5 5 b c c c . . 
-        . . c b b b c d 5 5 b c . . . . 
-        `,img`
-        . . . . c c c c c . . . . . . . 
-        . . c c 5 5 5 5 5 c . . . . . . 
-        . c 5 5 5 5 1 f 5 5 c . . . . . 
-        c 5 5 5 5 5 f f 5 5 5 c . . . . 
-        c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 c . . . 
-        c 5 3 3 3 5 5 5 5 5 5 5 d c . . 
-        c 5 3 3 3 5 5 5 5 5 d d d c . . 
-        . c 5 5 5 5 b 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c . . 
-        . c b b c 5 5 b b d d d d c c c 
-        . c c c c c c d d d d d d d d c 
-        . . . . c c c b 5 5 b d d d c . 
-        . . . . . c d 5 5 b b c c c . . 
-        . . . . c c c c c c c . . . . . 
-        . . . . c b b b c . . . . . . . 
-        `,img`
-        . . . . c c c c c . . . . . . . 
-        . . c c 5 5 5 5 5 c . . . . . . 
-        . c 5 5 5 5 1 f 5 5 c . . . . . 
-        c 5 5 5 5 5 f f 5 5 5 c . . . . 
-        c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 c . . . 
-        c 5 3 3 3 5 5 5 5 5 5 5 d c . . 
-        c 5 5 5 5 5 5 5 5 5 d d d c . . 
-        . c 5 5 5 5 b 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c . . 
-        . c b b c 5 5 b b d d d d c c c 
-        . c c c c c c d d d d d d d d c 
-        . . . . c c b 5 5 b d d d c c . 
-        . . . . c d 5 5 b b c c c . . . 
-        . . . . c c c c c c c . . . . . 
-        . . . . c b b b c . . . . . . . 
-        `,img`
-        . . . . c c c c c . . . . . . . 
-        . . c c 5 5 5 5 5 c . . . . . . 
-        . c 5 5 5 5 1 f 5 5 c . . . . . 
-        c 5 5 5 5 5 f f 5 5 5 c . . . . 
-        c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 c . . . 
-        c 5 3 3 3 5 5 5 5 5 5 5 d c . . 
-        c 5 5 5 5 5 5 5 5 5 d d d c . . 
-        . c 5 5 5 5 b 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c . . 
-        . c b b c 5 5 b b d d d d c c . 
-        . c c c c c b b d d d d d d c c 
-        . . . c c 5 5 b 5 5 d d d d d c 
-        . . . . c b 5 5 b b c c c c c c 
-        . . . . c c c c c c . . . . . . 
-        . . . . . c b b b c . . . . . . 
-        `,img`
-        . . . . . . . . . . . . . . . . 
-        . . . . c c c c . . . . . . . . 
-        . . c c 5 5 5 5 c c . . . . . . 
-        . c 5 5 5 5 5 5 5 5 c . . . . . 
-        c 5 5 5 5 5 1 f 5 5 5 c . . . . 
-        c 5 5 5 5 5 f f 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 c . . . 
-        c c 3 3 b b 5 5 5 5 5 5 d c . . 
-        c 5 3 3 3 5 5 5 5 5 d d d c . . 
-        . b 5 5 5 5 5 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c . . 
-        . c b b c 5 5 b b d d d d c c c 
-        . c c c c c c d d d d d d d d c 
-        . . . c c c c d 5 5 b d d d c c 
-        . . . c b c c b 5 5 b c c c . . 
-        . . . c c c d 5 5 b c . . . . . 
-        `,img`
-        . . . . . . . . . . . . . . . . 
-        . . . . c c c c . . . . . . . . 
-        . . c c 5 5 5 5 c c . . . . . . 
-        . c 5 5 5 5 5 5 5 5 c . . . . . 
-        c 5 5 5 5 5 1 f 5 5 5 c . . . . 
-        c 5 5 5 5 5 f f 5 5 5 5 c . . . 
-        c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
-        c c b b 1 b 5 5 5 5 5 5 d c . . 
-        c 5 3 3 3 5 5 5 5 5 d d d c . . 
-        . b 5 5 5 5 5 5 5 5 d d d c . . 
-        . . c b b c 5 5 b d d d d c . . 
-        . c b b c 5 5 b b d d d d c c c 
-        . c c c c c c d d d d d d d d c 
-        . . . c c c c d 5 5 b d d c c . 
-        . . c b b c c c 5 5 b c c . . . 
-        . . c c c c c d 5 5 c . . . . . 
-        `],
-    500,
-    true
-    )
-    dragon.follow(mySprite, 5)
+game.onUpdateInterval(2000, function () {
+    if (max_enemies <= 6) {
+        side = randint(1, 4)
+        if (side == 1) {
+            bat = sprites.create(img`
+                . f f f . . . . . . . . f f f . 
+                f f c . . . . . . . f c b b c . 
+                f c c . . . . . . f c b b c . . 
+                c f . . . . . . . f b c c c . . 
+                c f f . . . . . f f b b c c . . 
+                f f f c c . c c f b c b b c . . 
+                f f f c c c c c f b c c b c . . 
+                . f c 3 c c 3 b c b c c c . . . 
+                . c b 3 b c 3 b b c c c c . . . 
+                c c b b b b b b b b c c . . . . 
+                c b 1 b b b 1 b b b b f c . . . 
+                f b b b b b b b b b b f c c . . 
+                f b c b b b c b b b b f . . . . 
+                . f 1 f f f 1 b b b c f . . . . 
+                . . f b b b b b b c f . . . . . 
+                . . . f f f f f f f . . . . . . 
+                `, SpriteKind.Enemy)
+            animation.runImageAnimation(
+            bat,
+            [img`
+                . . f f f . . . . . . . . f f f 
+                . f f c c . . . . . . f c b b c 
+                f f c c . . . . . . f c b b c . 
+                f c f c . . . . . . f b c c c . 
+                f f f c c . c c . f c b b c c . 
+                f f c 3 c c 3 c c f b c b b c . 
+                f f b 3 b c 3 b c f b c c b c . 
+                . c b b b b b b c b b c c c . . 
+                . c 1 b b b 1 b b c c c c . . . 
+                c b b b b b b b b b c c . . . . 
+                c b c b b b c b b b b f . . . . 
+                f b 1 f f f 1 b b b b f c . . . 
+                f b b b b b b b b b b f c c . . 
+                . f b b b b b b b b c f . . . . 
+                . . f b b b b b b c f . . . . . 
+                . . . f f f f f f f . . . . . . 
+                `,img`
+                . . f f f . . . . . . . . . . . 
+                f f f c c . . . . . . . . f f f 
+                f f c c . . c c . . . f c b b c 
+                f f c 3 c c 3 c c f f b b b c . 
+                f f b 3 b c 3 b c f b b c c c . 
+                . c b b b b b b c f b c b c c . 
+                . c b b b b b b c b b c b b c . 
+                c b 1 b b b 1 b b b c c c b c . 
+                c b b b b b b b b c c c c c . . 
+                f b c b b b c b b b b f c . . . 
+                f b 1 f f f 1 b b b b f c c . . 
+                . f b b b b b b b b c f . . . . 
+                . . f b b b b b b c f . . . . . 
+                . . . f f f f f f f . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                `,img`
+                . . . . . . . . . . . . . . . . 
+                . . c c . . c c . . . . . . . . 
+                . . c 3 c c 3 c c c . . . . . . 
+                . c b 3 b c 3 b c c c . . . . . 
+                . c b b b b b b b b f f . . . . 
+                c c b b b b b b b b f f . . . . 
+                c b 1 b b b 1 b b c f f f . . . 
+                c b b b b b b b b f f f f . . . 
+                f b c b b b c b c c b b b . . . 
+                f b 1 f f f 1 b f c c c c . . . 
+                . f b b b b b b f b b c c . . . 
+                c c f b b b b b c c b b c . . . 
+                c c c f f f f f f c c b b c . . 
+                . c c c . . . . . . c c c c c . 
+                . . c c c . . . . . . . c c c c 
+                . . . . . . . . . . . . . . . . 
+                `,img`
+                . f f f . . . . . . . . f f f . 
+                f f c . . . . . . . f c b b c . 
+                f c c . . . . . . f c b b c . . 
+                c f . . . . . . . f b c c c . . 
+                c f f . . . . . f f b b c c . . 
+                f f f c c . c c f b c b b c . . 
+                f f f c c c c c f b c c b c . . 
+                . f c 3 c c 3 b c b c c c . . . 
+                . c b 3 b c 3 b b c c c c . . . 
+                c c b b b b b b b b c c . . . . 
+                c b 1 b b b 1 b b b b f c . . . 
+                f b b b b b b b b b b f c c . . 
+                f b c b b b c b b b b f . . . . 
+                . f 1 f f f 1 b b b c f . . . . 
+                . . f b b b b b b c f . . . . . 
+                . . . f f f f f f f . . . . . . 
+                `],
+            500,
+            true
+            )
+            bat.setPosition(randint(0, 160), -10)
+            bat.follow(mySprite, 20)
+            max_enemies += 1
+        } else if (side == 2) {
+            snake = sprites.create(img`
+                . . . . . c c c c c c c . . . . 
+                . . . . c 6 7 7 7 7 7 6 c . . . 
+                . . . c 7 c 6 6 6 6 c 7 6 c . . 
+                . . c 6 7 6 f 6 6 f 6 7 7 c . . 
+                . . c 7 7 7 7 7 7 7 7 7 7 c . . 
+                . . f 7 8 1 f f 1 6 7 7 7 f . . 
+                . . f 6 f 1 f f 1 f 7 7 7 f . . 
+                . . . f f 2 2 2 2 f 7 7 6 f . . 
+                . . c c f 2 2 2 2 7 7 6 f c . . 
+                . c 7 7 7 7 7 7 7 7 c c 7 7 c . 
+                c 7 1 1 1 7 7 7 7 f c 6 7 7 7 c 
+                f 1 1 1 1 1 7 6 f c c 6 6 6 c c 
+                f 1 1 1 1 1 1 6 6 c 6 6 6 c . . 
+                f 6 1 1 1 1 1 6 6 6 6 6 6 c . . 
+                . f 6 1 1 1 1 1 6 6 6 6 c . . . 
+                . . f f c c c c c c c c . . . . 
+                `, SpriteKind.Enemy)
+            animation.runImageAnimation(
+            snake,
+            [img`
+                . . . . c c c c c c . . . . . . 
+                . . . c 6 7 7 7 7 6 c . . . . . 
+                . . c 7 7 7 7 7 7 7 7 c . . . . 
+                . c 6 7 7 7 7 7 7 7 7 6 c . . . 
+                . c 7 c 6 6 6 6 c 7 7 7 c . . . 
+                . f 7 6 f 6 6 f 6 7 7 7 f . . . 
+                . f 7 7 7 7 7 7 7 7 7 7 f . . . 
+                . . f 7 7 7 7 6 c 7 7 6 f c . . 
+                . . . f c c c c 7 7 6 f 7 7 c . 
+                . . c 7 2 7 7 7 6 c f 7 7 7 7 c 
+                . c 7 7 2 7 7 c f c 6 7 7 6 c c 
+                c 1 1 1 1 7 6 f c c 6 6 6 c . . 
+                f 1 1 1 1 1 6 6 c 6 6 6 6 f . . 
+                f 6 1 1 1 1 1 6 6 6 6 6 c f . . 
+                . f 6 1 1 1 1 1 1 6 6 6 f . . . 
+                . . c c c c c c c c c f . . . . 
+                `,img`
+                . . . c c c c c c . . . . . . . 
+                . . c 6 7 7 7 7 6 c . . . . . . 
+                . c 7 7 7 7 7 7 7 7 c . . . . . 
+                c 6 7 7 7 7 7 7 7 7 6 c . . . . 
+                c 7 c 6 6 6 6 c 7 7 7 c . . . . 
+                f 7 6 f 6 6 f 6 7 7 7 f . . . . 
+                f 7 7 7 7 7 7 7 7 7 7 f . . . . 
+                . f 7 7 7 7 6 c 7 7 6 f . . . . 
+                . . f c c c c 7 7 6 f c c c . . 
+                . . c 6 2 7 7 7 f c c 7 7 7 c . 
+                . c 6 7 7 2 7 7 c f 6 7 7 7 7 c 
+                . c 1 1 1 1 7 6 6 c 6 6 6 c c c 
+                . c 1 1 1 1 1 6 6 6 6 6 6 c . . 
+                . c 6 1 1 1 1 1 6 6 6 6 6 c . . 
+                . . c 6 1 1 1 1 1 7 6 6 c c . . 
+                . . . c c c c c c c c c c . . . 
+                `],
+            500,
+            true
+            )
+            snake.setPosition(randint(0, 160), 130)
+            snake.follow(mySprite, 5)
+            max_enemies += 1
+        } else if (side == 3) {
+            skeleton = sprites.create(img`
+                ........................
+                ........................
+                ........................
+                ........................
+                ..........ffff..........
+                ........ff1111ff........
+                .......fb111111bf.......
+                .......f11111111f.......
+                ......fd11111111df......
+                ......fd11111111df......
+                ......fddd1111dddf......
+                ......fbdbfddfbdbf......
+                ......fcdcf11fcdcf......
+                .......fb111111bf.......
+                ......fffcdb1bdffff.....
+                ....fc111cbfbfc111cf....
+                ....f1b1b1ffff1b1b1f....
+                ....fbfbffffffbfbfbf....
+                .........ffffff.........
+                ...........fff..........
+                ........................
+                ........................
+                ........................
+                ........................
+                `, SpriteKind.Enemy)
+            animation.runImageAnimation(
+            skeleton,
+            [img`
+                ........................
+                ........................
+                ........................
+                ........................
+                ..........ffff..........
+                ........ff1111ff........
+                .......fb111111bf.......
+                .......f11111111f.......
+                ......fd11111111df......
+                ......fd11111111df......
+                ......fddd1111dddf......
+                ......fbdbfddfbdbf......
+                ......fcdcf11fcdcf......
+                .......fb111111bf.......
+                ......fffcdb1bdffff.....
+                ....fc111cbfbfc111cf....
+                ....f1b1b1ffff1b1b1f....
+                ....fbfbffffffbfbfbf....
+                .........ffffff.........
+                ...........fff..........
+                ........................
+                ........................
+                ........................
+                ........................
+                `,img`
+                ........................
+                ........................
+                ........................
+                ........................
+                ..........ffff..........
+                ........ff1111ff........
+                .......fb111111bf.......
+                .......f11111111f.......
+                ......fd11111111df......
+                ......fd11111111df......
+                ......fddd1111dddf......
+                ......fbdbfddfbdbf......
+                ......fcdcf11fcdcf......
+                .......fb111111ffff.....
+                ......fffcdb1bc111cf....
+                ....fc111cbfbf1b1b1f....
+                ....f1b1b1ffffbfbfbf....
+                ....fbfbfffffff.........
+                .........fffff..........
+                ..........fff...........
+                ........................
+                ........................
+                ........................
+                ........................
+                `,img`
+                ........................
+                ........................
+                ........................
+                ........................
+                ..........ffff..........
+                ........ff1111ff........
+                .......fb111111bf.......
+                .......f11111111f.......
+                ......fd11111111df......
+                ......fd11111111df......
+                ......fddd1111dddf......
+                ......fbdbfddfbdbf......
+                ......fcdcf11fcdcf......
+                .......fb111111bf.......
+                ......fffcdb1bdffff.....
+                ....fc111cbfbfc111cf....
+                ....f1b1b1ffff1b1b1f....
+                ....fbfbffffffbfbfbf....
+                .........ffffff.........
+                ...........fff..........
+                ........................
+                ........................
+                ........................
+                ........................
+                `,img`
+                ........................
+                ........................
+                ........................
+                ........................
+                ..........ffff..........
+                ........ff1111ff........
+                .......fb111111bf.......
+                .......f11111111f.......
+                ......fd11111111df......
+                ......fd11111111df......
+                ......fddd1111dddf......
+                ......fbdbfddfbdbf......
+                ......fcdcf11fcdcf......
+                .....ffff111111bf.......
+                ....fc111cdb1bdfff......
+                ....f1b1bcbfbfc111cf....
+                ....fbfbfbffff1b1b1f....
+                .........fffffffbfbf....
+                ..........fffff.........
+                ...........fff..........
+                ........................
+                ........................
+                ........................
+                ........................
+                `],
+            500,
+            true
+            )
+            skeleton.setPosition(-10, randint(0, 120))
+            skeleton.follow(mySprite, 10)
+            max_enemies += 1
+        } else {
+            dragon = sprites.create(img`
+                . . . . . . . . . . . . . . . . 
+                . . . . c c c c . . . . . . . . 
+                . . c c 5 5 5 5 c c . . . . . . 
+                . c 5 5 5 5 5 5 5 5 c . . . . . 
+                c 5 5 5 5 5 1 f 5 5 5 c . . . . 
+                c 5 5 5 5 5 f f 5 5 5 5 c . . . 
+                c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 d c . . 
+                c 5 3 3 3 5 5 5 5 5 d d d c . . 
+                . b 5 5 5 5 5 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c c . 
+                . c b b c 5 5 b b d d d d c d c 
+                . c c c c c c d d d d d d d d c 
+                . . . c c c c d 5 5 b d d d c . 
+                . . c c c c c b 5 5 b c c c . . 
+                . . c b b b c d 5 5 b c . . . . 
+                `, SpriteKind.Enemy)
+            dragon.setPosition(170, randint(0, 120))
+            animation.runImageAnimation(
+            dragon,
+            [img`
+                . . . . . . . . . . . . . . . . 
+                . . . . c c c c . . . . . . . . 
+                . . c c 5 5 5 5 c c . . . . . . 
+                . c 5 5 5 5 5 5 5 5 c . . . . . 
+                c 5 5 5 5 5 1 f 5 5 5 c . . . . 
+                c 5 5 5 5 5 f f 5 5 5 5 c . . . 
+                c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 d c . . 
+                c 5 3 3 3 5 5 5 5 5 d d d c . . 
+                . b 5 5 5 5 5 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c c . 
+                . c b b c 5 5 b b d d d d c d c 
+                . c c c c c c d d d d d d d d c 
+                . . . c c c c d 5 5 b d d d c . 
+                . . c c c c c b 5 5 b c c c . . 
+                . . c b b b c d 5 5 b c . . . . 
+                `,img`
+                . . . . c c c c c . . . . . . . 
+                . . c c 5 5 5 5 5 c . . . . . . 
+                . c 5 5 5 5 1 f 5 5 c . . . . . 
+                c 5 5 5 5 5 f f 5 5 5 c . . . . 
+                c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 c . . . 
+                c 5 3 3 3 5 5 5 5 5 5 5 d c . . 
+                c 5 3 3 3 5 5 5 5 5 d d d c . . 
+                . c 5 5 5 5 b 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c . . 
+                . c b b c 5 5 b b d d d d c c c 
+                . c c c c c c d d d d d d d d c 
+                . . . . c c c b 5 5 b d d d c . 
+                . . . . . c d 5 5 b b c c c . . 
+                . . . . c c c c c c c . . . . . 
+                . . . . c b b b c . . . . . . . 
+                `,img`
+                . . . . c c c c c . . . . . . . 
+                . . c c 5 5 5 5 5 c . . . . . . 
+                . c 5 5 5 5 1 f 5 5 c . . . . . 
+                c 5 5 5 5 5 f f 5 5 5 c . . . . 
+                c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 c . . . 
+                c 5 3 3 3 5 5 5 5 5 5 5 d c . . 
+                c 5 5 5 5 5 5 5 5 5 d d d c . . 
+                . c 5 5 5 5 b 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c . . 
+                . c b b c 5 5 b b d d d d c c c 
+                . c c c c c c d d d d d d d d c 
+                . . . . c c b 5 5 b d d d c c . 
+                . . . . c d 5 5 b b c c c . . . 
+                . . . . c c c c c c c . . . . . 
+                . . . . c b b b c . . . . . . . 
+                `,img`
+                . . . . c c c c c . . . . . . . 
+                . . c c 5 5 5 5 5 c . . . . . . 
+                . c 5 5 5 5 1 f 5 5 c . . . . . 
+                c 5 5 5 5 5 f f 5 5 5 c . . . . 
+                c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 c . . . 
+                c 5 3 3 3 5 5 5 5 5 5 5 d c . . 
+                c 5 5 5 5 5 5 5 5 5 d d d c . . 
+                . c 5 5 5 5 b 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c . . 
+                . c b b c 5 5 b b d d d d c c . 
+                . c c c c c b b d d d d d d c c 
+                . . . c c 5 5 b 5 5 d d d d d c 
+                . . . . c b 5 5 b b c c c c c c 
+                . . . . c c c c c c . . . . . . 
+                . . . . . c b b b c . . . . . . 
+                `,img`
+                . . . . . . . . . . . . . . . . 
+                . . . . c c c c . . . . . . . . 
+                . . c c 5 5 5 5 c c . . . . . . 
+                . c 5 5 5 5 5 5 5 5 c . . . . . 
+                c 5 5 5 5 5 1 f 5 5 5 c . . . . 
+                c 5 5 5 5 5 f f 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 c . . . 
+                c c 3 3 b b 5 5 5 5 5 5 d c . . 
+                c 5 3 3 3 5 5 5 5 5 d d d c . . 
+                . b 5 5 5 5 5 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c . . 
+                . c b b c 5 5 b b d d d d c c c 
+                . c c c c c c d d d d d d d d c 
+                . . . c c c c d 5 5 b d d d c c 
+                . . . c b c c b 5 5 b c c c . . 
+                . . . c c c d 5 5 b c . . . . . 
+                `,img`
+                . . . . . . . . . . . . . . . . 
+                . . . . c c c c . . . . . . . . 
+                . . c c 5 5 5 5 c c . . . . . . 
+                . c 5 5 5 5 5 5 5 5 c . . . . . 
+                c 5 5 5 5 5 1 f 5 5 5 c . . . . 
+                c 5 5 5 5 5 f f 5 5 5 5 c . . . 
+                c 5 5 5 5 5 5 5 5 5 5 5 c . . . 
+                c c b b 1 b 5 5 5 5 5 5 d c . . 
+                c 5 3 3 3 5 5 5 5 5 d d d c . . 
+                . b 5 5 5 5 5 5 5 5 d d d c . . 
+                . . c b b c 5 5 b d d d d c . . 
+                . c b b c 5 5 b b d d d d c c c 
+                . c c c c c c d d d d d d d d c 
+                . . . c c c c d 5 5 b d d c c . 
+                . . c b b c c c 5 5 b c c . . . 
+                . . c c c c c d 5 5 c . . . . . 
+                `],
+            500,
+            true
+            )
+            dragon.follow(mySprite, 5)
+            max_enemies += 1
+        }
+    }
 })
